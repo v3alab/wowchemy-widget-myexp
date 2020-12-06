@@ -16,13 +16,16 @@
     <div class="row experience">
       <!-- Timeline -->
       <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <!-- 1st row -->
         <div class="row h-50">
           <div class="col {{if gt $idx 0}}border-right{{end}}">&nbsp;</div>
           <div class="col">&nbsp;</div>
         </div>
+        <!-- 2nd row -->
         <div class="m-2">
           <span class="badge badge-pill border {{if not .date_end}}exp-fill{{end}}">&nbsp;</span>
         </div>
+        <!-- 3rd row -->
         <div class="row h-50">
           <div class="col {{if lt $idx (sub $exp_len 1)}}border-right{{end}}">&nbsp;</div>
           <div class="col">&nbsp;</div>
@@ -37,7 +40,7 @@
               {{- with .company_url}}<a href="{{.}}" target="_blank" rel="noopener">{{end}}{{.company | markdownify | emojify}}{{with .company_url}}</a>{{end -}}
             </h4>
             <div class="text-muted exp-meta">
-              {{ (time .date_start).Format ($page.Params.date_format | default "January 2006") }} –
+              {{ (time .date_start).Format ($page.Params.date_format | default "January 2006") }}
               {{with .location}}
                 <span class="middot-divider"></span>
                 <span>{{.}}</span>
