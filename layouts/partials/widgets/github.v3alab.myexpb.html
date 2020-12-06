@@ -23,6 +23,9 @@
         </div>
         <!-- 2nd row -->
         <div class="m-2">
+          {{ (time .date_start).Format ($page.Params.date_format | default "January 2006") }}
+        </div>
+        <div class="m-2">
           <span class="badge badge-pill border {{if not .date_end}}exp-fill{{end}}">&nbsp;</span>
         </div>
         <!-- 3rd row -->
