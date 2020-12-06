@@ -1,6 +1,6 @@
 {{ $ := .root }}
 {{ $page := .page }}
-
+{{ $columns := $page.Params.design.columns | default "2" }}
 <!-- Experience widget -->
 <div class="row">
   <div class="col-12 col-lg-4 section-heading">
@@ -55,4 +55,5 @@
     </div>
     {{end}}
     {{end}}
+   </div>
 </div>
