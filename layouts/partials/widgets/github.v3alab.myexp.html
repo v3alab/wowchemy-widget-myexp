@@ -4,8 +4,9 @@
 
 <!-- Experience widget -->
 <div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
+  {{ with $page.Title }}
   {{ with $page.Content }}{{ . }}{{ end }}
-
+  
   {{ if $page.Params.experience }}
   {{ $exp_len := len $page.Params.experience }}
   {{ range $idx, $key := sort $page.Params.experience ".date_start" "desc" }}
