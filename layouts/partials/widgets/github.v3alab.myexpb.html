@@ -21,10 +21,10 @@
           <div class="col {{if gt $idx 0}}border-right{{end}}">&nbsp;</div>
           <div class="col">&nbsp;</div>
         </div>
-        <!-- 2nd row
-        <div class="m-2">
+        <!-- 2nd row-->
+        <div class="my-m-2">
           {{ (time .date_start).Format ($page.Params.date_format | default "January 2006") }}
-        </div> -->
+        </div>
         <div class="m-2">
           <span class="badge badge-pill border {{if not .date_end}}exp-fill{{end}}">&nbsp;</span>
         </div>
